@@ -118,7 +118,7 @@
                     </ul>
                     <div class="tab-content">
                         <div id="login">
-                            <form action="/" method="post">
+                            <form id="myForm" action="/" method="post">
 
                                 <div class="field-wrap">
                                     <label>
@@ -136,29 +136,19 @@
 
                                 <p class="forgot"><a href="#">Forgot Password?</a></p>
 
-                                <button class="button button-block" />Log In</button>
+                                <button class="button button-block" onclick="submitForm()" />Log In</button>
 
                             </form>
 
                         </div>
                         <div id="signup">
-                            <form action="/" method="post">
-                                <div class="top-row">
-                                    <div class="field-wrap">
-                                        <label>
+                            <form id="myForm" action="/" method="post">
+                                <div class="field-wrap">
+                                    <label>
                               First Name<span class="req">*</span>
                             </label>
-                                        <input type="text" required autocomplete="off" />
-                                    </div>
-
-                                    <div class="field-wrap">
-                                        <label>
-                              Last Name<span class="req">*</span>
-                            </label>
-                                        <input type="text" required autocomplete="off" />
-                                    </div>
+                                    <input type="text" required autocomplete="off" />
                                 </div>
-
                                 <div class="field-wrap">
                                     <label>
                             Email Address<span class="req">*</span>
@@ -172,8 +162,13 @@
                           </label>
                                     <input type="password" required autocomplete="off" />
                                 </div>
-
-                                <button type="submit" class="button button-block" />Get Started</button>
+                                <div class="field-wrap">
+                                    <label>
+                            Address<span class="req">*</span>
+                          </label>
+                                    <input type="password" required autocomplete="off" />
+                                </div>
+                                <button type="submit" class="button button-block" onclick="submitForm()" />Get Started</button>
 
                             </form>
 

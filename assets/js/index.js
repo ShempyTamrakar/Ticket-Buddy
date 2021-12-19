@@ -11,8 +11,11 @@ $('section.awSlider .carousel').on('slid.bs.carousel', function() {
     $('section.awSlider > img').attr('src', bscn);
 });
 
-
 /* 
 Philips ambilight tv
 Üzerine gleince duruyor slide
 */
+function submitForm() {
+
+    document.getElementById("myForm").reset();
+}

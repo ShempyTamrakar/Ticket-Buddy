@@ -28,94 +28,127 @@
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle waves-effect waves-dark" data-toggle="collapse" data-target=".sidebar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="navbar-brand waves-effect waves-dark" href="index.html"><i class="large material-icons"></i> <strong>Ticket Buddy</strong></a>
-
                 <div id="sideNav" href=""><i class="material-icons dp48">toc</i></div>
             </div>
-
             <ul class="nav navbar-top-links navbar-right">
-                <li><a class="button waves-effect waves-dark" href="#!"><b>Sell</b><i class="material-icons right"></i></a></li>
+                <li><a class=" waves-effect waves-dark" data-toggle="modal"><b>MyTicket</b></a></li>
+                <li><a class=" waves-effect waves-dark" data-toggle="modal" data-target="#myModal"><b>Sell</b></a></li>
                 <li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i class="fa fa-user fa-fw"></i> <b>User</b> <i class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
         </nav>
-        <!-- Dropdown Structure -->
-        <ul id="dropdown1" class="dropdown-content">
-            <li><a href="#"><i class="fa fa-user fa-fw"></i> My Profile</a>
-            </li>
-            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-            </li>
-            <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-            </li>
-        </ul>
-        <!--/. NAV TOP  -->
-        <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-                    <li>
-                        <a class="active-menu waves-effect waves-dark" href="index.html"><i class="fa fa-home"></i>Home</a>
-                    </li>
-                    <li>
-                        <a class=" waves-effect waves-dark" href="dashboard.html"><i class="fa fa-dashboard"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect waves-dark"><i class="fa fa-sitemap"></i>Category<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="night Club.html">Night Club</a>
-                            </li>
-                            <li>
-                                <a href="#">Match</a>
-                            </li>
-                            <li>
-                                <a href="#">Event</a>
-                            </li>
-                            <li>
-                                <a href="#">Concert</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="form.html"><i class="fa fa-sign-in"></i>Login</a>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect waves-dark"><i class="fa fa-info"></i>About Us </a>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect waves-dark"><i class="fa fa-phone"></i>Contact Us</a>
-                    </li>
-
-                </ul>
-
+        <!--sell form-->
+        <!-- Trigger the modal with a button -->
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
-
-        </nav>
-
-        <div id="page-wrapper">
-            <div class="header">
-
-                <div class="container">
-                    <div class="row">
-                        <div class="card-wrapper col-lg-4 col-md-6 col-xs-12">
-                            <div class="card">
-                                <div class="card-img-wrapper">
-                                    <img class="card-img-top" src="https://www.fortech.ro/wp-content/uploads/2018/12/DigitalCommerceSoftwarePlatform-e1554472385425.jpg" alt="Card image cap">
+            <h3 class="col-lg-offset-5">Sell</h3>
+            <div class="modal-body">
+                <div class="tab-content">
+                    <div id="myForm">
+                        <form action="/" method="post">
+                            <div class="top-row">
+                                <div class="field-wrap">
+                                    <input type="file" required autocomplete="off" />
                                 </div>
-                                <div class="card-body">
-                                    <h5 class="card-title">Special title treatment Special</h5>
-                                    <div class="card-content">
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
+                                <div class="field-wrap">
+
+                                    <input type="date" required autocomplete="off" />
                                 </div>
                             </div>
-                        </div>
+                            <div class="field-wrap">
+                                <label>
+                        Description<span class="req">*</span>
+                      </label>
+                                <textarea rows="" cols="18" required autocomplete="off"></textarea>
+                            </div>
+                            <div class="field-wrap">
+                                <input type="radio" id="html" value="HTML">
+                                <label for="html">HTML</label><br>
+                                <input type="radio" id="css" value="CSS">
+                                <label for="css">CSS</label><br>
+                                <input type="radio" id="javascript" value="JavaScript">
+                                <label for="javascript">JavaScript</label>
+                            </div>
+                            <button type="submit" class="button button-block" onclick="submitFunction()" />Save</button>
+                        </form>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#"><i class="fa fa-user fa-fw"></i> My Profile</a>
+        </li>
+        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+        </li>
+        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+        </li>
+    </ul>
+    <!--/. NAV TOP  -->
+    <nav class="navbar-default navbar-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu">
+                <li>
+                    <a class="active-menu waves-effect waves-dark" href="index.html"><i class="fa fa-home"></i>Home</a>
+                </li>
+                <li>
+                    <a class=" waves-effect waves-dark" href="dashboard.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="#" class="waves-effect waves-dark"><i class="fa fa-sitemap"></i>Category<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="#">Night Club</a>
+                        </li>
+                        <li>
+                            <a href="#">Match</a>
+                        </li>
+                        <li>
+                            <a href="#">Event</a>
+                        </li>
+                        <li>
+                            <a href="#">Concert</a>
+                        </li>
+                        <li>
+                            <a href="#">Movie</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="form.html"><i class="fa fa-sign-in"></i>Login</a>
+                </li>
+                <li>
+                    <a href="#" class="waves-effect waves-dark"><i class="fa fa-info"></i>About Us </a>
+                </li>
+                <li>
+                    <a href="#" class="waves-effect waves-dark"><i class="fa fa-phone"></i>Contact Us</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+    <!-- /. NAV SIDE-->
+
+    <div id="page-wrapper">
+        <div class="body">
+            <h3 class="col-lg-offset-5">Night Club</h3>
+            <div class="card">
+                <img src="/w3images/jeans3.jpg" alt="Denim Jeans" style="width:100%">
+                <h1>Tailored Jeans</h1>
+                <p class="price">$19.99</p>
+                <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+                <p><button>Add to Cart</button></p>
             </div>
         </div>
     </div>
